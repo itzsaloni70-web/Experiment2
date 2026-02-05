@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=L">
+    <title>Experiment1.2.1</title>
+    <style> 
+        body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: black;
+      color: grey;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    </style>
+</head>
+<body>
+    <h2>Live Character Counter</h2>
+    <textarea id="ta" rows="10" cols="50" ></textarea>
+    <p>Total Character: <span id="c" ></span></p>
+</body>
+<script>
+    let ta=document.getElementById('ta');
+    ta.addEventListener("input",()=>{
+        let len =ta.value.length;
+        document.getElementById('c').innerText = len;
+    })
+</script>
+</html>
